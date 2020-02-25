@@ -36,9 +36,9 @@ YR = year
 TM = tabular interval in minutes
 
 Example: The command
-                  sunpos 4 8 1999 30 > position
+                  sunpos 4 8 2019 30 > position
          will calculate the sun's position every 30 minutes from 0h UT
-         on the 4th of August 1999.
+         on the 4th of August 2019.
 
 Output is sent to stdout. Times are in UT and positions are in decimal degrees.
 The positions are printed with an accuracy of 0.1 degrees. 
@@ -50,9 +50,6 @@ Other makeables:
 
 Please report suggestions and errors to:
 
-Per-Ivar Emanuelsen,
-Department of Physics,
-University of Tromsø,
-N-9037 Tromsø, Norway.
+Per Ivar Emanuelsen, UiT The Arctic University of Norway.
 
-e-mail:   Per-Ivar.Emanuelsen@phys.uit.no
+e-mail:   per.i.emanuelsen@uit.no
