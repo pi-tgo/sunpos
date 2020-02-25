@@ -1,0 +1,58 @@
+README FILE FOR sunpos VERSION 0.31
+
+Author: Per-Ivar Emanulsen
+Based on ephemeris given in Duffett-Smith, Peter, "Astronomy with
+your personal computer". ISBN 0 521 31976 5 paperback version.
+
+This program calculates the altitude and azimuth angle
+of the sun at the given date and with a given tabular interval during the
+whole universal day.
+
+To install the program, please follow these instruction:
+
+1. Create a directory for the source:
+     mkdir sunpos
+
+2. Unpack the compressed tar file inside the directory:
+     gzcat sunpos-0.3.tar.gz | tar xvf -
+     (or if you are using the GNU version of tar:
+      tar xvzf sunpos-0.3,tar,gz
+
+3. Edit the file sunpos.h to reflect your site:
+     LATITUDE - your latitude in decimal degrees ( positive North )
+     LONGITUDE - your longitude in decimal degrees ( positive East )
+
+4. Compile the program:
+     make
+
+5. You can copy the executable (sunpos) to a suitable directory if
+   you want. A suitable place is ~/bin. If ~/bin is in your PATH, you
+   can run the program from anywhere you want.
+
+The arguments to sunpos is:
+DY = day in month (in the range 1 to 31)
+MN = month of year (in the range 1 to 12 where 1=January, 2=February, ...)
+YR = year
+TM = tabular interval in minutes
+
+Example: The command
+                  sunpos 4 8 1999 30 > position
+         will calculate the sun's position every 30 minutes from 0h UT
+         on the 4th of August 1999.
+
+Output is sent to stdout. Times are in UT and positions are in decimal degrees.
+The positions are printed with an accuracy of 0.1 degrees. 
+
+Other makeables:
+     make clean   -  removes all .* and the sunpos file.
+     make tar     -  tar's and gzip the distribution.
+     make sunpos  -  same as make without arguments.
+
+Please report suggestions and errors to:
+
+Per-Ivar Emanuelsen,
+Department of Physics,
+University of Tromsø,
+N-9037 Tromsø, Norway.
+
+e-mail:   Per-Ivar.Emanuelsen@phys.uit.no
